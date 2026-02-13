@@ -1,0 +1,100 @@
+:root {
+    --primary-bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --green-success: #28a745;
+    --red-fail: #dc3545;
+    --grey-light: #e9ecef;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-bg);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+.stats-container {
+    margin-bottom: 1.5rem;
+}
+
+.percentage {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.detail {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.25rem 0 0 0;
+}
+
+.progress-bar-container {
+    background-color: var(--grey-light);
+    border-radius: 8px;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* Default width */
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.goal {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .percentage {
+        font-size: 3rem;
+    }
+}
